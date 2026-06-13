@@ -1,0 +1,36 @@
+The ``5-text_indentation`` module
+=================================
+
+Import the function:
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Punctuation creates blank lines:
+
+>>> text_indentation("Hello. How are you? Fine: yes")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+Fine:
+<BLANKLINE>
+yes
+
+Text without punctuation is unchanged:
+
+>>> text_indentation("No punctuation")
+No punctuation
+
+Spaces after punctuation are skipped:
+
+>>> text_indentation("A.  B")
+A.
+<BLANKLINE>
+B
+
+Text must be a string:
+
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
