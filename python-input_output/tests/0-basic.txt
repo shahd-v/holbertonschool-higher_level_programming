@@ -1,0 +1,11 @@
+Basic doctests for Python input/output helper functions.
+
+    >>> to_json_string = __import__('3-to_json_string').to_json_string
+    >>> from_json_string = __import__('4-from_json_string').from_json_string
+    >>> pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
+    >>> to_json_string([1, 2, 3])
+    '[1, 2, 3]'
+    >>> from_json_string('{"name": "Ada", "age": 36}') == {"name": "Ada", "age": 36}
+    True
+    >>> pascal_triangle(5)
+    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
