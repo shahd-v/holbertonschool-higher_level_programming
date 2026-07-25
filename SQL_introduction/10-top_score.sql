@@ -1,0 +1,2 @@
+-- List scores and names in descending score order
+SELECT score, name FROM second_table ORDER BY score DESC;
